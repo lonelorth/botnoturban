@@ -17,19 +17,6 @@ def initiate_db():
     connection.commit()
     connection.close()
 
-def check_db(id, title, description, price):
-    connection = sqlite3.connect('products2.db')
-    cursor = connection.cursor()
-
-    check_db = cursor.execute('SELECT * FROM Products WHERE title=?', (title,))
-
-    if check_db.fetchone() is None:
-        cursor.execute(f'''
-    INSERT INTO Products (id, title, description, price) VALUES('{id}', '{title}', '{description}', '{price}')
-''')
-    connection.commit()
-    connection.close()
-
 def get_all_products():
     connection = sqlite3.connect('products2.db')
     cursor = connection.cursor()
