@@ -31,15 +31,15 @@ in_button3 = InlineKeyboardButton(text='Продукт1', callback_data='product
 in_button4 = InlineKeyboardButton(text='Продукт2', callback_data='product_buying')
 in_button5 = InlineKeyboardButton(text='Продукт3', callback_data='product_buying')
 in_button6 = InlineKeyboardButton(text='Продукт4', callback_data='product_buying')
-in_button7 = InlineKeyboardButton(text='Продукт5', callback_data='product_buying')
-in_button8 = InlineKeyboardButton(text='Продукт6', callback_data='product_buying')
+#in_button7 = InlineKeyboardButton(text='Продукт5', callback_data='product_buying')
+#in_button8 = InlineKeyboardButton(text='Продукт6', callback_data='product_buying')
 
 kb3.add(in_button3)
 kb3.row(in_button4)
 kb3.row(in_button5)
 kb3.row(in_button6)
-kb3.row(in_button7)
-kb3.row(in_button8)
+#kb3.row(in_button7)
+#kb3.row(in_button8)
 
 list_img = []
 images = './img'
@@ -105,7 +105,7 @@ async def send_calories(message, state):
 async def get_buying_list(message):
     global list_cat
     list_cat = []
-    for i in range(len(list_img)):
+    for i in range(len(list_img) - 2):
         with open(f'{images}/{list_img[i]}', 'rb') as img:
             full_img = list_img[i].replace(".jpg", "")
             j = full_img.split('_')
