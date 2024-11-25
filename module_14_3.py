@@ -11,8 +11,7 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 
 
 
-# ------ Марк ап клавиатура (с кнопками)----------------
-kb = ReplyKeyboardMarkup(resize_keyboard=True) # инициализация клавиатуры
+kb = ReplyKeyboardMarkup(resize_keyboard=True)
 button = KeyboardButton(text='Информация')
 button2 = KeyboardButton(text='Рассчитать')
 button3 = KeyboardButton(text='Купить')
@@ -20,15 +19,14 @@ kb.row(button)
 kb.row(button2)
 kb.add(button3)
 
-#-------- Ин лайн клавиатуры (с кнопками)----------------
-kb2 = InlineKeyboardMarkup(resize_keyboard=True) # рассчёт калорий человека
+kb2 = InlineKeyboardMarkup(resize_keyboard=True)
 in_button1 = InlineKeyboardButton(text='Рассчитать норму калорий', callback_data='calories')
 in_button2 = InlineKeyboardButton(text='Формулы расчёта', callback_data='formulas')
 
 kb2.add(in_button1)
 kb2.add(in_button2)
 
-kb3 = InlineKeyboardMarkup(resize_keyboard=True) # покупка продукта
+kb3 = InlineKeyboardMarkup(resize_keyboard=True)
 in_button3 = InlineKeyboardButton(text='Продукт1', callback_data='product_buying')
 in_button4 = InlineKeyboardButton(text='Продукт2', callback_data='product_buying')
 in_button5 = InlineKeyboardButton(text='Продукт3', callback_data='product_buying')
