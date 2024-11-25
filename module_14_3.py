@@ -7,7 +7,7 @@ from keywboards import *
 from config import *
 
 
-api = '7507203863:AAH_Zsisk7Rml3GzwMV1406TRCyLXPv09hk'
+api = '*'
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
